@@ -89,12 +89,13 @@ console.log('js located')
  //Capturing DOM Element
 
 const loadQuote = document.querySelector('#load-quote');
-const quoteBox = document.querySelector('#quote-box');
-// const quoteBoxCss = document.querySelector('.quote-box')
+const quoteContainer = document.querySelector('.container');
 const randomQuote = document.querySelector('.quote');
 const source = document.querySelector('.source');
 const year = document.querySelector('.year')
 const citation = document.querySelector('.citation')
+const body = document.querySelector('body')
+const quoteBox = document.querySelector('.quote-box')
 
 
 /***
@@ -102,26 +103,32 @@ const citation = document.querySelector('.citation')
  ***/
 
  function getRandomQuote() {
-    let index = Math.floor(Math.random() * quotes.length);  
+    let index = Math.floor(Math.random() * quotes.length); 
     randomQuote.innerHTML = quotes[index].quote;
     source.innerHTML = quotes[index].source;
     year.textContent = quotes[index].year;
     citation.textContent = quotes[index].citation;
-    if(year || citation){
-        source.innerHTML =` ${source.innerHTML},  ${year.textContent}  ${citation.textContent}`;
-    }
-
-    } 
-
-  getRandomQuote()
+    if(year || citation) {source.innerHTML =` ${source.innerHTML}, ${year.textContent} ${citation.textContent}`;
+}
+}
   
 
 /***
  * `printQuote` function
  ***/
 function printQuote(){
-    getRandomQuote()  
+    getRandomQuote()
+    
 }
+//function for get rendom color
+
+function  changeColor(){
+    const color = Math.floor(Math.random()*123456).toString(16);
+    body.style.backgroundColor = "#" + color;
+    quoteBox.style.backgroundColor = "#" + color;
+    loadQuote.style.backgroundColor = "#" + color;
+
+  }
 
 
       
@@ -129,69 +136,65 @@ function printQuote(){
  * click event listener for the print quote button
  ***/
  loadQuote.addEventListener('click', function(){
-
-             printQuote()
+    changeColor()
+     printQuote()
  });
 
  //function for set intevel
 
 setInterval(function(){
-    let index = Math.floor(Math.random() * quotes.length);  
-    randomQuote.innerHTML = quotes[index].quote;
-    source.innerHTML = quotes[index].source;
-    year.textContent = quotes[index].year;
-    citation.textContent = quotes[index].citation;
-    if(year || citation){
-        source.innerHTML =` ${source.innerHTML},  ${year.textContent}  ${citation.textContent}`;
-    }
+    changeColor()
+    printQuote()
+
 }, 5000);
  
  //function for random color change
 
- function getRandColor() {
-    var hex = "01234567890ABCDEF",
-      res = "#";
-    for (var i = 0; i < 6; i += 1) {
-      res += hex[Math.floor(Math.random() * hex.length)];
-    }
-    return res;
-  }
+//  let i = 0;
+// function change() {
+//   let color = ["black", "blue", "brown", "green"];
+//   quoteBoxCss.style.backgroundColor = color[i];
+//   i = (i + 1) % color.length;
+// }
+
+
+ 
   
   
   
   
-    setInterval(function(){
- let quoteBoxCss = document.QuerySelector('.quote-box');
-    quoteBoxCss.style.backgroundColor = getRandColor();
-    },5000)
+  
+    // setInterval(function(){
+    // quoteBoxCss.innerHTML = getRandColor();
+    // },5000)
    
 
 
-    // alternative for random color
-    function getRandomColor() {
-      var letters = '0123456789ABCDEF';
-      var color = '#';
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
+    // // alternative for random color
+    // function getRandomColor() {
+    //   var letters = '0123456789ABCDEF';
+    //   var color = '#';
+    //   for (var i = 0; i < 6; i++) {
+    //     color += letters[Math.floor(Math.random() * 16)];
+    //   }
+    //   return color;
+    // }
     
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    // function getRandomInt(min, max) {
+    //     return Math.floor(Math.random() * (max - min + 1)) + min;
+    // }
     
-    function setRandomColor() {
-      quoteBoxCss.style.backgroundColor = getRandomColor;
-    }
+    // function setRandomColor() {
+    //   quoteBoxCss.style.backgroundColor = getRandomColor;
+    // }
     
-    function setRandomClass() {
-        let randomStyleNumber = getRandomInt(1, 20);
-        quoteBoxCss.style.backgroundColor = randomStyleNumber;
-    }
+    // function setRandomClass() {
+    //     let randomStyleNumber = getRandomInt(1, 20);
+    //     quoteBoxCss.style.backgroundColor = randomStyleNumber;
+    // }
     
-    function stylize() {
-        setRandomClass();
-        setRandomColor();
-    }
+    // function stylize() {
+    //     setRandomClass();
+    //     setRandomColor();
+    // }
 

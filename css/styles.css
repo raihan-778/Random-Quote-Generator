@@ -22,9 +22,8 @@ h1 {
 
 }
 
-.load-quote:hover {
-    background:​#211644 !important;
-}
+.load-quote:select{background:#211644; }
+  
 
 .load-quote {
     color: #d9cfe7;
@@ -34,7 +33,7 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 15px 0;
-    background: #857807dc;
+    /* background: #857807dc; */
     border-radius: 53px;
     border: 2px solid rgba(0, 0, 0, 0.3);
     transition: 0.5s;
@@ -48,13 +47,17 @@ h1 {
 
 .container {
     width: 90%;
-    max-width: 1024px;
+    max-width: 1100px;
     display:flex;
     margin: auto;
-    padding: 5px;
     border-radius: 35px;
     min-height: 350px;
     align-items: center;
+    padding: 25px 25px 15px 55px;
+        background: rgba(0, 0, 0, 0.1);
+        border-left: 5px solid rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    
     
 
 }
@@ -62,7 +65,7 @@ h1 {
     text-shadow: 1px 1px 1px rgba(97, 92, 92, 0.3);
     line-height: 0.5;
     border-radius:35px;
-    background: linear-gradient(45deg, #0c0f35, #090333);
+    /* background: linear-gradient(45deg, #0c0f35, #090333); */
     box-shadow:  12px -12px 2px #72777c,
              -12px 12px 2px #383834;
 }
@@ -145,12 +148,12 @@ h1 {
         font-size: 1.5rem;
     }
 
-    .container {
+    /* .container {
         padding: 25px 25px 15px 55px;
         background: rgba(0, 0, 0, 0.1);
         border-left: 5px solid rgba(0, 0, 0, 0.3);
         border-radius: 10px;
-    }
+    } */
 
     .quote {
         font-size: 2.5rem;
