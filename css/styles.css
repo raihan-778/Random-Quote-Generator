@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap');
+
+body {
+    background-color: rgb(13 17 98);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 5px;
+}
+
+h1 {
+    text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
+
+}
+
+.load-quote:select{background:#211644; }
+  
+
+.load-quote {
+    color: #d9cfe7;
+    text-shadow: 1px 1px 1px rgb(50 50 50 / 30%);
+    width: 12em;
+    max-height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    /* background: #857807dc; */
+    border-radius: 53px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+
+}
+/* .load-quote:focus {
+    outline: none;
+    color: #17cfa1;
+    background:#72777c;
+} */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    display:flex;
+    margin: auto;
+    border-radius: 35px;
+    min-height: 350px;
+    align-items: center;
+    padding: 25px 25px 15px 55px;
+        background: rgba(0, 0, 0, 0.1);
+        border-left: 5px solid rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    
+    
+
+}
+.quote-box {
+    text-shadow: 1px 1px 1px rgba(97, 92, 92, 0.3);
+    line-height: 0.5;
+    border-radius:35px;
+    /* background: linear-gradient(45deg, #0c0f35, #090333); */
+    box-shadow:  12px -12px 2px #72777c,
+             -12px 12px 2px #383834;
+}
+
+
+.quote {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    position: relative;
+    margin: 0;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.quote:before,
+.quote:after {
+    font-size: 3rem;
+    line-height: 2.5rem;
+    position: absolute;
+}
+
+.quote:before {
+    /* content: '“'; */
+    top: 0.1em;
+    left: -0.5em;
+}
+
+.quote:after {
+    /* content: '”'; */
+    bottom: -0.1em;
+    margin-left: 0.1em;
+    position: absolute;
+}
+
+.source {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    text-align: right;
+    margin-right: 4em;
+}
+
+.source:before {
+    content: '—';
+}
+
+.citation {
+    font-style: italic;
+}
+
+.citation:before {
+    content: ', ';
+    font-style: normal;
+}
+
+.year:before {
+    content: ', ';
+    font-style: normal;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 25px;
+    }
+
+    header {
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        height: 50px;
+        margin-top: 20px;
+        margin-right: 5px;
+        border-bottom: 4px solid rgba(48, 40, 40, 0.3);
+    }
+
+    .load-quote {
+        font-size: 1.5rem;
+    }
+
+    /* .container {
+        padding: 25px 25px 15px 55px;
+        background: rgba(0, 0, 0, 0.1);
+        border-left: 5px solid rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    } */
+
+    .quote {
+        font-size: 2.5rem;
+    }
+
+    .quote:before,
+    .quote:after {
+        font-size: 3rem;
+    }
+
+    .quote:before {
+        top: 0.25em;
+    }
+
+    .quote:after {
+        bottom: 0.1em;
+    }
+
+    .source {
+        font-size: 1.25rem;
+    }
+}
